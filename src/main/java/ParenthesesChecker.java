@@ -21,7 +21,7 @@ public boolean checkParentheses(String input) {
 
 
         for (char current : chars) {
-            if (current == '(' || current == '{' || current == '[') {
+            if (current == '(' || current == '{' || current == '[' || current == '<' ){
                 container.push(current);
 
             } else {
@@ -29,7 +29,8 @@ public boolean checkParentheses(String input) {
                     return false;
                 } else if ((current == ')' && container.peek() != '('
                         || (current == '}' && container.peek() != '{')
-                        || (current == ']' && container.peek() != '['))) {
+                        || (current == ']' && container.peek() != '[')
+                        || (current == '>' && container.peek() != '<'))) {
                     return false;
 
                 } else {
