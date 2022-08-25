@@ -10,6 +10,9 @@ public class ParenthesesChecker {
 //    Need to figure out how to ignore alphabet characters
 public boolean checkParentheses(String input) {
 
+    input = input.replaceAll("[abcdefghijklmnopqrstuvwxyz]","");
+    input = input.replaceAll("\\s+","");
+
     // Create a stack named container to hold characters we want
     Stack<Character> container = new Stack<Character>();
 
